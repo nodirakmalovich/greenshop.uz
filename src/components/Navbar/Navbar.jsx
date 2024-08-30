@@ -13,17 +13,17 @@ export default function Navbar() {
         {
             name: "Shop",
             selected: false,
-            link: '/Shop'
+            link: '/shop'
         },
         {
             name: "Plant Care",
             selected: false,
-            link: '/PlantCare'
+            link: '/plant-care'
         },
         {
             name: "Blogs",
             selected: false,
-            link: '/Blog'
+            link: '/blog'
         }
     ]);
 
