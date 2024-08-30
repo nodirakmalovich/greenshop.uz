@@ -1,6 +1,7 @@
 import Data from "@/app/data/data";
 import { useState } from "react";
 import MainCard from "../Cards/MainCard";
+import MenuList from "../MenuList/MenuList";
 
 export default function ShopProductRow() {
 
@@ -31,13 +32,13 @@ export default function ShopProductRow() {
             <ul className="mb-10 flex gap-[50px] mt-[92px] border-b-[0.3px] border-[#46A35880]">
                 {
                     secPages.map((page, index) => (
-                        <li
+                        <MenuList
                             key={index}
-                            className={`cursor-pointer text-[16px] ${page.selected ? 'font-[700] text-[#46A358]' : 'font-[400]'} border-b-[3px]  pb-[23.7px] ${page.selected ? 'border-[#46A358]' : 'border-transparent'} `}
-                            onClick={() => handleSecPageSelect(index)}
-                        >
-                            {page.name}
-                        </li>
+                            page={page}
+                            index={index}
+                            name={page.name}
+                            onClick={() => { handleSecPageSelect(index) }}
+                        />
                     ))
                 }
             </ul>

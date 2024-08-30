@@ -5,21 +5,22 @@ import MainCard from "../Cards/MainCard";
 import PaginationRounded from "../Pagination/Pagination";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import MenuList from "../MenuList/MenuList";
 
 export default function HomeProducts() {
     const { data } = Data();
 
 
     const [optionsData, setOptionsData] = useState([
-        { name: 'All Plants', selectedOpt: true },
-        { name: 'New Arrivals', selectedOpt: false },
-        { name: 'Sale', selectedOpt: false }
+        { name: 'All Plants', selected: true },
+        { name: 'New Arrivals', selected: false },
+        { name: 'Sale', selected: false }
     ]);
 
     const handleCategoriesSelect = (index) => {
         const updatedCategories = optionsData.map((category, i) => ({
             ...category,
-            selectedOpt: i === index
+            selected: i === index
         }));
         setOptionsData(updatedCategories);
     };
@@ -44,16 +45,16 @@ export default function HomeProducts() {
                     <Categories />
                 </div>
                 <div>
-                    <div className="mb-5 flex justify-between items-start">
-                        <ul className="flex gap-[50px] text-[15px] font-[400px] text-[#3D3D3D]">
-                            {optionsData.map((opt, index) => (
-                                <li
-                                    onClick={() => handleCategoriesSelect(index)}
+                    <div className="mb-5 flex justify-between items-start border-b-[0.3px] border-[#46A35880]">
+                        <ul className="flex gap-[50px] text-[15px] font-[400px] text-[#3D3D3D] ">
+                            {optionsData.map((page, index) => (
+                                <MenuList
                                     key={index}
-                                    className={`cursor-pointer border-b-[3px] ${opt.selectedOpt ? 'border-[#46A358] text-[#46A358]' : 'border-transparent text-[#3D3D3D]'}`}
-                                >
-                                    {opt.name}
-                                </li>
+                                    page={page}
+                                    name={page.name}
+                                    index={index}
+                                    onClick={() => { handleCategoriesSelect(index) }}
+                                />
                             ))}
                         </ul>
                         <div className="flex gap-2 text-[15px] font-[400px] text-[#3D3D3D]">

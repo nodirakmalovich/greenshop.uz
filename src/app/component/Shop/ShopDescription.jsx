@@ -1,5 +1,6 @@
 import Data from "@/app/data/data"
 import { useState } from "react";
+import MenuList from "../MenuList/MenuList";
 
 export default function ShopDescription() {
 
@@ -33,13 +34,13 @@ export default function ShopDescription() {
             <ul className="mb-10 flex gap-[50px] mt-[92px] border-b-[0.3px] border-[#46A35880]">
                 {
                     pages.map((page, index) => (
-                        <li
+                        <MenuList
                             key={index}
-                            className={`cursor-pointer text-[16px] ${page.selected ? 'font-[700] text-[#46A358] ' : 'font-[400]'} border-b-[3px]  pb-[23.7px] ${page.selected ? 'border-[#46A358]' : 'border-transparent'} `}
-                            onClick={() => handlePageSelect(index)}
-                        >
-                            {page.name}
-                        </li>
+                            name={page.name}
+                            index={index}
+                            page={page}
+                            onClick={() => { handlePageSelect(index) }}
+                        />
                     ))
                 }
             </ul>

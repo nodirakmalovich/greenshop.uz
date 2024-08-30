@@ -24,7 +24,7 @@ export default function ShopHero() {
     }
 
     return (
-        <div className="ShopHero flex items-center gap-[52px]">
+        <div className="ShopHero flex items-center gap-[52px] mt-[50px]">
             <div className="left w-[50%]">
                 <ProductCard />
             </div>
@@ -69,6 +69,11 @@ export default function ShopHero() {
                         <MainButton text={'buy now'} />
 
                         <MainButton variant="white" text={'Add to cart'} />
+
+
+                        <button className="border-[1px] rounded-md border-[#46A358] w-[30px] h-[30px] flex justify-center items-center">
+                            <img src={'LikeGreen.svg'} alt="LikeGreen" />
+                        </button>
                     </div>
                 </div>
 
@@ -92,10 +97,10 @@ export default function ShopHero() {
                     </p>
                     <div className="flex gap-3">
 
-                        <img src={'/Facebook.svg'} alt="Facebook" />
-                        <img src={'/Twitter.svg'} alt="Twitter" />
-                        <img src={'/Linkedin.svg'} alt="Linkedin" />
-                        <img src={'/Message.svg'} alt="Message" />
+                        <img src={'/FacebookBlack.svg'} alt="FacebookBlack" />
+                        <img src={'/TwitterBlack.svg'} alt="TwitterBlack" />
+                        <img src={'/LinkedinBlack.svg'} alt="LinkedinBlack" />
+                        <img src={'/MessageBlack.svg'} alt="MessageBlack" />
                     </div>
                 </div>
 
