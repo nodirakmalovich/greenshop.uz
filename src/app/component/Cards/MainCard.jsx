@@ -18,13 +18,15 @@ export default function MainCard({ image, name, price }) {
         <div
             onMouseEnter={handleOpen}
             onMouseLeave={handleClose}
-            className={`Card w-[258px] shadow-md rounded-lg p-5 box-border border-t-[1px]  ${isOpen ? 'border-[#46A358] ' : 'border-transparent'}`}
+            className={`Card w-[258px] shadow-md rounded-lg p-5 box-border border-t-[1px]  ${isOpen ? 'border-[#46A358] ' : 'border-transparent'} relative`}
         >
+            {/* <div className={`rounded-lg bg-gray-600/80 absolute z-20 top-0 bottom-0 right-0 left-0 ${isOpen ? 'block' : 'hidden'}`}
+                style={{ backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}></div> */}
 
             <div className="w-[218px] h-[300px]  flex items-center justify-center box-border relative">
                 <img className="card_image object-contain w-[258px] " src={image} alt={name} />
 
-                <div className={`absolute bottom-[5px]  gap-2 items-center justify-center ${isOpen ? 'flex' : 'hidden'}`}>
+                <div className={`absolute z-50 bottom-[5px]  gap-2 items-center justify-center ${isOpen ? 'flex' : 'hidden'}`}>
 
                     <div className="w-[35px] h-[35px] items-center justify-center shadow-md flex rounded-md">
                         <img src={'/basket.svg'} alt="basket" />

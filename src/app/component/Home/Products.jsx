@@ -6,10 +6,12 @@ import PaginationRounded from "../Pagination/Pagination";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import MenuList from "../MenuList/MenuList";
+import { useRouter } from "next/navigation";
 
 export default function HomeProducts() {
-    const { data } = Data();
 
+    const { data } = Data();
+    const router = useRouter()
 
     const [optionsData, setOptionsData] = useState([
         { name: 'All Plants', selected: true },
@@ -36,6 +38,11 @@ export default function HomeProducts() {
         setSingleProduct(product)
     }
 
+    const handleClick = (plantId) => {
+        
+        // router.push(`/Shop:${plantId}`)
+        router.push(`/Shop`)
+    }
 
 
     return (
@@ -70,13 +77,14 @@ export default function HomeProducts() {
 
                     <div className="grid grid-cols-3 gap-5">
                         {data.map((plant, index) => (
-                            <Link href={`/Shop`} key={index}>
+                            <div onClick={() => {handleClick(plant.id)}} key={index}>
                                 <MainCard
+                                
                                     image={plant.image.props.src}
                                     name={plant.name}
                                     price={plant.price}
                                 />
-                            </Link>
+                            </div>
                         ))}
                     </div>
                 </div>
