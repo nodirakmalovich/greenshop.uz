@@ -1,7 +1,16 @@
 import Image from "next/image";
 import MainButton from "../Buttons/MainButton";
+import { useRouter } from "next/navigation";
 
 export default function HomeHero() {
+
+    const route = useRouter()
+
+    const handleShop = () => {
+        route.push('/checkout')
+    }
+
+
     return (
         <div className="Hero mt-3 ps-10 flex justify-between items-center bg-[linear-gradient(97.77deg,_rgba(245,245,245,0.5)_-23.46%,_rgba(245,245,245,0.5)_107.51%)]">
             <div className="hero_body">
@@ -19,6 +28,7 @@ export default function HomeHero() {
                 </p>
 
                 <MainButton
+                    onClick={handleShop}
                     text={'shop now'}
                 />
             </div>
