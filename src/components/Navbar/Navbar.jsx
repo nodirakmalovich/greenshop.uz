@@ -11,11 +11,11 @@ export default function Navbar() {
             selected: true,
             link: '/'
         },
-        // {
-        //     name: "Shop",
-        //     selected: false,
-        //     link: '/shop'
-        // },
+        {
+            name: "Shop",
+            selected: false,
+            link: '/shop'
+        },
         {
             name: "Plant Care",
             selected: false,
@@ -45,6 +45,10 @@ export default function Navbar() {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+
+    const handleLogin = () => {
+        route.push('/login')
+    }
 
     return (
         <div className="navbar">
@@ -92,7 +96,7 @@ export default function Navbar() {
 
                         <img onClick={handleBasket} src={'/basket.svg'} alt="basket" />
 
-                        <button className="bg-[#46A358] flex text-white w-[100px] rounded-md h-[35px] items-center justify-center gap-2">
+                        <button onClick={handleLogin} className="bg-[#46A358] flex text-white w-[100px] rounded-md h-[35px] items-center justify-center gap-2">
                             <img src={'/logout.svg'} alt="logout" />
                             <p>Login</p>
                         </button>
@@ -100,7 +104,7 @@ export default function Navbar() {
                             onClick={toggleMenu}
                             className="bg-[#46A358] w-[35px] h-[35px] flex items-center justify-center rounded-full block md:hidden"
                         >
-                            <img  src={'/Filter.svg'} alt="Filter" />
+                            <img src={'/Filter.svg'} alt="Filter" />
                         </button>
                     </div>
                 </div>
