@@ -42,13 +42,13 @@ export default function HomeProducts() {
 
   return (
     <div>
-      <div className="flex justify-between mt-[26px]">
-        <div>
+      <div className="flex justify-center lg:justify-between mt-[26px]">
+        <div className="hidden lg:block">
           <Categories />
         </div>
         <div>
-          <div className="mb-5 flex justify-between items-start border-b-[0.3px] border-[#46A35880]">
-            <ul className="flex gap-[50px] text-[15px] font-[400px] text-[#3D3D3D] ">
+          <div className="mb-5 flex justify-between gap-5 items-start border-b-[0.3px] border-[#46A35880]">
+            <ul className="flex gap-2 md:gap-[50px] text-[15px] font-[400px] text-[#3D3D3D] ">
               {optionsData.map((page, index) => (
                 <MenuList
                   key={index}
@@ -61,6 +61,7 @@ export default function HomeProducts() {
                 />
               ))}
             </ul>
+
             <div className="flex gap-2 text-[15px] font-[400px] text-[#3D3D3D]">
               <p>Sort by:</p>
               <select
@@ -76,18 +77,16 @@ export default function HomeProducts() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {ProductsData.map((plant, index) => (
               <div
-                onClick={() => {
-                  handleClick(plant.id);
-                }}
                 key={index}
               >
                 <MainCard
                   image={plant.image.props.src}
                   name={plant.name}
                   price={plant.price}
+                  id={plant.id}
                 />
               </div>
             ))}
@@ -95,7 +94,7 @@ export default function HomeProducts() {
         </div>
       </div>
 
-      <div className="flex justify-end">
+      <div className="flex justify-end mt-5">
         <PaginationRounded />
       </div>
     </div>

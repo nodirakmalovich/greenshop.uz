@@ -1,10 +1,10 @@
-import Data from "@/data/data";
 import { useState } from "react";
 import MainCard from "../Cards/MainCard";
 import MenuList from "../MenuList/MenuList";
+import { ProductsData } from "@/data/data";
 
 export default function ShopProductRow() {
-  const { productData } = Data();
+  
 
   const [secPages, setSecPages] = useState([
     {
@@ -38,13 +38,14 @@ export default function ShopProductRow() {
       </ul>
 
       <div className="px-3 flex overflow-hidden overflow-x-auto gap-5 py-3">
-        {productData.map((product, index) => {
+        {ProductsData.map((product, index) => {
           return (
             <div key={index}>
               <MainCard
                 image={product.image.props.src}
                 name={product.name}
                 price={product.price}
+                id={product.id}
               />
             </div>
           );

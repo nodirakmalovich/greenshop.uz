@@ -5,7 +5,7 @@ import SecButton from "../Buttons/secButton";
 export default function HomeTrend() {
     return (
         <div className="Trend my-10 ">
-            <div className="Trend_body grid grid-cols-2 gap-7 justify-between items-center " >
+            <div className="Trend_body hidden md:grid  grid-cols-2 gap-7 justify-between items-center " >
 
                 <div className="left flex justify-between items-center p-5 shadow-lg rounded-lg">
                     <Image src={'/BlushingBromeliad.svg'} width={200} height={200} alt="BlushingBromeliad" />

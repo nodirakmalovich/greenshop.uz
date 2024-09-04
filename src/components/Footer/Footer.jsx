@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="Footer mt-10">
             <div className="my-container ">
 
-                <div className="Footer_top p-[25px] bg-[linear-gradient(97.77deg,_rgba(245,245,245,0.5)_-23.46%,_rgba(245,245,245,0.5)_107.51%)]">
+                <div className="Footer_top hidden lg:block p-[25px] bg-[linear-gradient(97.77deg,_rgba(245,245,245,0.5)_-23.46%,_rgba(245,245,245,0.5)_107.51%)]">
                     <div className="body flex justify-between gap-12">
                         <div className="footer_card px-3">
                             <img className="w-full h-[100px]" src={'/footer1.svg'} alt="footerImage" />
@@ -51,7 +51,8 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="Footer_middle grid grid-cols-4 justify-between bg-[#46A3581A] px-[23px] py-[27px]">
+
+                <div className="Footer_middle hidden lg:grid  grid-cols-4 justify-between bg-[#46A3581A] px-[23px] py-[27px]">
                     <img src={'/logo.svg'} alt="logo" />
 
                     <div className="flex gap-2 items-center">
@@ -77,7 +78,8 @@ export default function Footer() {
                         </p>
                     </div>
                 </div>
-                <div className="Footer_bottom py-[33px] px-[23px] grid grid-cols-4 bg-[linear-gradient(97.77deg,_rgba(245,245,245,0.5)_-23.46%,_rgba(245,245,245,0.5)_107.51%)]">
+
+                <div className="Footer_bottom py-[33px] px-[23px] grid grid-cols-1 gap-5 md:gap-0 sm:grid-cols-2 md:grid-cols-4 bg-[linear-gradient(97.77deg,_rgba(245,245,245,0.5)_-23.46%,_rgba(245,245,245,0.5)_107.51%)]">
                     <ul>
                         <li className="text-[18px] font-[700] text-[#3D3D3D] leading-[30px]">My Account</li>
                         <li className="text-[14px] font-[400] text-[#3D3D3D] leading-[30px]">My Account</li>
@@ -112,23 +114,23 @@ export default function Footer() {
 
                         <div className="images flex w-full gap-[10px] mt-5">
                             <button className="border-[2px] rounded-md border-[#46A35833] w-[30px] h-[30px] flex justify-center items-center">
-                                <img src={'Facebook.svg'} alt="Facebook" />
+                                <img src={'/Facebook.svg'} alt="Facebook" />
                             </button>
 
                             <button className="border-[2px] rounded-md border-[#46A35833] w-[30px] h-[30px] flex justify-center items-center">
-                                <img src={'Instagram.svg'} alt="Instagram" />
+                                <img src={'/Instagram.svg'} alt="Instagram" />
                             </button>
 
                             <button className="border-[2px] rounded-md border-[#46A35833] w-[30px] h-[30px] flex justify-center items-center">
-                                <img src={'Twitter.svg'} alt="Twitter" />
+                                <img src={'/Twitter.svg'} alt="Twitter" />
                             </button>
 
                             <button className="border-[2px] rounded-md border-[#46A35833] w-[30px] h-[30px] flex justify-center items-center">
-                                <img src={'Linkedin.svg'} alt="Linkedin" />
+                                <img src={'/Linkedin.svg'} alt="Linkedin" />
                             </button>
 
                             <button className="border-[2px] rounded-md border-[#46A35833] w-[30px] h-[30px] flex justify-center items-center">
-                                <img src={'Union.svg'} alt="Union" />
+                                <img src={'/Union.svg'} alt="Union" />
                             </button>
                         </div>
 
@@ -137,7 +139,7 @@ export default function Footer() {
                             We accept
                         </p>
 
-                        <img src={'pay.svg'} alt="pay" />
+                        <img src={'/pay.svg'} alt="pay" />
                     </div>
 
                 </div>

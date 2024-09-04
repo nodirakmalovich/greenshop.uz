@@ -16,7 +16,7 @@ export default function HomeBlog() {
         </span>
       </p>
 
-      <div className="grid grid-cols-4 gap-10 my-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 my-5">
         {BlogData.map((blog, index) => {
           return (
             <div key={index}>
