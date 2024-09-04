@@ -58,10 +58,10 @@ export default function MainCard({ image, name, price, id }) {
                     <div className="w-[35px] h-[35px] items-center justify-center shadow-md flex rounded-md">
                         <img src={'/like.svg'} alt="like" />
                     </div>
-                    <div className="w-[35px] h-[35px] items-center justify-center shadow-md flex rounded-md">
+                    {/* <div className="w-[35px] h-[35px] items-center justify-center shadow-md flex rounded-md">
 
                         <img src={'/search.svg'} alt="search" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <div className="card_body">
