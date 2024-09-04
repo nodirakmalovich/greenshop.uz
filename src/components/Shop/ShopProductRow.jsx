@@ -23,7 +23,7 @@ export default function ShopProductRow() {
 
   return (
     <div>
-      <ul className="mb-10 flex gap-[50px] mt-[92px] border-b-[0.3px] border-[#46A35880]">
+      <ul className="mb-10 flex gap-[50px] mt-[52px] border-b-[0.3px] border-[#46A35880]">
         {secPages.map((page, index) => (
           <MenuList
             key={index}
