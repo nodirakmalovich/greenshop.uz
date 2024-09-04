@@ -30,11 +30,11 @@ export default function MainCard({ image, name, price, id }) {
             selectedItem.count = 1
             Basket.push(selectedItem);
             localStorage.setItem('basket', JSON.stringify(Basket));
+            window.location.reload()
 
         } else {
-            alert('Bu mahsulot allaqachon basketda mavjud.');
+            alert('This product is already in the basket.');
         }
-        window.location.reload()
     }
 
 
