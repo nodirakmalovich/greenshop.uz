@@ -3,7 +3,7 @@
 import MainButton from "@/components/Buttons/MainButton";
 import ProductCard from "@/components/Cards/ProductCard";
 import MenuList from "@/components/MenuList/MenuList";
-import ShopProductRow from "@/components/Shop/ShopProductRow";
+import ShopProductRow from "@/components/shop/ShopProductRow";
 import { Basket, ProductsData } from "@/data/data";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -187,7 +187,6 @@ function Page({ params }) {
             : "The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. The ceramic cylinder planters come with a wooden stand to help elevate your plants off the ground. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
         </p>
       </div>
-
       <ShopProductRow />
     </div>
 
