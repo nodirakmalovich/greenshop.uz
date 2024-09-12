@@ -1,4 +1,5 @@
-import Image from "next/image";
+'use client'
+
 import MainButton from "../Buttons/MainButton";
 import { useRouter } from "next/navigation";
 

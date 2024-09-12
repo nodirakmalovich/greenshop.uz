@@ -185,5 +185,8 @@ export const BlogData = [
   },
 ];
 
-export const Basket = JSON.parse(localStorage.getItem('basket')) || [];
+export const Basket = typeof window !== 'undefined' && localStorage.getItem('basket')
+  ? JSON.parse(localStorage.getItem('basket'))
+  : [];
+
 

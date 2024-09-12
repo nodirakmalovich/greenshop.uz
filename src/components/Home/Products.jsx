@@ -30,15 +30,7 @@ export default function HomeProducts() {
     setSortValue(event.target.value);
   };
 
-  function handleCardClick(product) {
-    const [singleProduct, setSingleProduct] = useState();
-    setSingleProduct(product);
-  }
-
-  const handleClick = (plantId) => {
-    // router.push(`/Shop:${plantId}`)
-    router.push(`/products/${plantId}`);
-  };
+  
 
   return (
     <div>

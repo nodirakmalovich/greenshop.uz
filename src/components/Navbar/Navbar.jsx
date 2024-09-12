@@ -12,11 +12,6 @@ export default function Navbar() {
             link: '/'
         },
         {
-            name: "Shop",
-            selected: false,
-            link: '/shop'
-        },
-        {
             name: "Plant Care",
             selected: false,
             link: '/plant-care'
